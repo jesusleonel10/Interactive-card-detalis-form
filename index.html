@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d1314feeb4.js" crossorigin="anonymous"></script>
+  <title>Interactive card details form</title>
+</head>
+<body>
+  <div class="container">
+    <main class="wrapper">
+      <div class="content">
+        <div class="bgimage"></div>
+
+        <div class="card">
+          <div class="card__back">
+            <span class="card__back__number" data-sort="5">000</span>
+            <img src="./images/bg-card-back.png">
+          </div>
+          <div class="card__front">
+            <img src="./images/card-logo.svg">
+            <div class="card__front-info">
+              <span class="card__front-info__number" data-sort="1">0000 0000 0000 0000</span>
+              <span class="card__front-info__name" data-sort="2">Jane Appleseed</span>
+              <div class="card__front-info__date">
+                <span data-sort="3">00</span>
+                /
+                <span data-sort="4">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="formcard">
+            <form id="form">
+                <label class="formcard__labels" for="card-name">Cardholder Name</label>
+                <input class="formcard__inputs" type="text" name="cardname" id="card-name" placeholder="e.g. Jane Appleseed" maxlength="24" data-sort="2">
+                <span class="error" data-sort="2">Wrong format, letters only</span>
+  
+                <label class="formcard__labels" for="card-number">Card Number</label>
+                <input class="formcard__inputs" type="text" name="cardnumber" id="card-number" placeholder="e.g. 1234 5678 9123 0000" data-sort="1" maxlength="19" data-mask="0000 0000 0000 0000" >
+                <span class="error" data-sort="1">Wrong format, numbers only</span>
+                
+                
+                <label class="formcard__labels" for="card-date__mm">Exp. Date (MM/YY)</label>
+                <input class="formcard__inputs" type="text" name="datemm" id="card-date__mm" placeholder="MM" maxlength="2" data-sort="3" data-mask="00" >
+                <span class="error" data-sort="4">Can´t be blank</span>
+                <input class="formcard__inputs" type="text" name="dateyy" id="card-date__yy" placeholder="YY" maxlength="2" data-sort="4" data-sort="4" data-mask="00" >
+                <span class="error" data-sort="3">Can´t be blank</span>
+               
+               
+                <label class="formcard__labels" for="card-cvc">CVC</label>
+                <input class="formcard__inputs" type="text" name="cardcvc" id="card-cvc" placeholder="e.g. 123" maxlength="3" data-sort="5" data-mask="000" >
+                <span class="error" data-sort="5">Can´t be blank</span>
+  
+                <div class="formcard__submit">
+                  <button id="submit" class="submit" type="submit">
+                    <span class="confirm">Confirm</span>
+                    <i class="check fa-solid fa-check"></i>
+                    <span class="spinner"></span>
+                  </button>
+                </div>
+            </form>
+          </div>
+    
+          <div class="card-added">
+            <div class="card-added__img">
+              <img src="./images/icon-complete.svg">
+            </div>
+    
+            <h2 class="card-added__title">Thank you!</h2>
+    
+            <p class="card-added__text">We've added your card details</p>
+    
+            <button class="card-added__button">Continue</button>
+          </div>
+    
+      </div>
+    </main>
+  </div>
+  <script src="https://jsuites.net/v4/jsuites.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
