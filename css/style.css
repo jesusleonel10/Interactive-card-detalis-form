@@ -163,12 +163,16 @@ button {
     grid-column: 1 / 4;
     background-color: hsl(0, 0%, 100%);
     border: 1px solid hsl(270, 3%, 87%);
+    color: hsl(279, 6%, 55%);
     border-radius: 10px;
     padding: 0 1rem;
-    color: hsl(279, 6%, 55%);
     font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
+}
+
+.formcard__inputs::placeholder {
+    color: hsl(270, 3%, 87%);
 }
 
 .formcard__inputs:focus {
@@ -410,12 +414,12 @@ button {
     }
     
     .card__front {
-        top: 1rem;
+        top: 0;
         left: -5rem;
     }
 
     .card__back {
-        top: 16rem;
+        top: 15rem;
         left: 0;
     }
 
